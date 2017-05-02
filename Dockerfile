@@ -7,6 +7,7 @@ RUN \
     bind9 \
     isc-dhcp-server && \
 
+
 COPY ["entrypoint.sh","/sbin/entrypoint.sh"]
 RUN chmod 0755 /sbin/entrypoint.sh
 
