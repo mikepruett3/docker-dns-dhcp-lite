@@ -7,9 +7,9 @@ RUN \
         bind9 \
         isc-dhcp-server  && \
 
-COPY ./entrypoint.sh /sbin/entrypoint.sh
-RUN chmod 0755 /sbin/entrypoint.sh
+# COPY ./entrypoint.sh /sbin/entrypoint.sh
+# RUN chmod 0755 /sbin/entrypoint.sh
 
 EXPOSE 53/udp 53/tcp 10000/tcp 67/udp 68/udp
 VOLUME /data
-ENTRYPOINT ["/sbin/entrypoint.sh"]
+# ENTRYPOINT ["/sbin/entrypoint.sh"]
