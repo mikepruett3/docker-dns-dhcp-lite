@@ -1,12 +1,8 @@
 FROM lsiobase/xenial
 MAINTAINER Mike Pruett, mikepruett3
 
-RUN \
- apt-get update && \
- apt-get install -y \
-    bind9 \
-    isc-dhcp-server && \
-
+RUN apt-get update
+RUN apt-get install -y bind9 isc-dhcp-server
 
 COPY ["entrypoint.sh","/sbin/entrypoint.sh"]
 RUN chmod 0755 /sbin/entrypoint.sh
